@@ -1,7 +1,12 @@
 name: Create Branch
 
 on:
-  workflow_dispatch:
+   push:
+    branches: [ "main" ]
+   pull_request:
+    branches: [ "main" ]
+    
+   workflow_dispatch:
     inputs:
       BranchName:
       type: choice 
