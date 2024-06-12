@@ -1,18 +1,25 @@
 name: Create Branch
 
 on:
- workflow_dispatch:
+  workflow_dispatch:
     inputs:
       BranchName:
-      type: choice 
-      description: Enter the branch name
-      required: true
-      options:
-       - feature_cloudhub
-       - development_cloudhub
-       - integration_cloudhub
-       - production_cloudhub
+        description: Enter the branch name
+        required: true
+        type: choice 
+        options:
+          - feature_cloudhub
+          - development_cloudhub
+          - integration_cloudhub
+          - production_cloudhub
+jobs:  
+  build:    
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+       
 
+        
 
  
          
