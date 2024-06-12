@@ -28,7 +28,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.BRANCH_TOKEN }}
         with:
-          branch: $ {{ BranchName }}
+          branch: 
 
  
          
